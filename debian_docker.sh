@@ -2,7 +2,6 @@
 cd ~
 
 # add local apt cache mirror
-echo 
 read -p "Set IP of your apt cache mirror (press ENTER to skip):" IP
 if [[ $IP -z ]]
 then
