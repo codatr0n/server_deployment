@@ -42,8 +42,9 @@ echo "Changing permissions for user: '$(whoami)' to run docker without sudo"
 sudo usermod -aG docker $(whoami)
 
 # create folders for docker container appdata
-mkdir -v ~/docker/ && mkdir ~/docker/appdata
+mkdir -v ~/docker/ && mkdir -v ~/docker/appdata
 
 # change default location for docker appdata
 # https://www.guguweb.com/2019/02/07/how-to-move-docker-data-directory-to-another-location-on-ubuntu/
-echo -e "{\n\t'data-root': '/home/$(whoami)/docker/appdata'\n}" | sudo tee /etc/docker/daemon.json > /dev/null
+# TODO: not working
+# echo -e "{\n\t'data-root': '/home/$(whoami)/docker/appdata'\n}" | sudo tee /etc/docker/daemon.json > /dev/null
