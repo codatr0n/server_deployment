@@ -3,7 +3,7 @@ cd ~
 
 # add local apt cache mirror
 read -p "Set IP of your apt cache mirror (press ENTER to skip):" IP
-if [[ ! -z "$IP"  ]]
+if [ ! -z "$IP"  ];
 then
   echo "Acquire::http::Proxy \"http://$(IP):3142\";" | sudo tee /etc/apt/apt.conf.d/00aptproxy > /dev/null
 fi
