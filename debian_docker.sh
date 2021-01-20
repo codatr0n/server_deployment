@@ -11,7 +11,7 @@ fi
 
 
 # install packages
-sudo apt install qemu-guest-agent
+sudo apt install qemu-guest-agent -y -f
 sudo systemctl start qemu-guest-agent
 
 # install webmin
