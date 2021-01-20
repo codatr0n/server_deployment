@@ -1,5 +1,16 @@
-# install packages
+#!/bin/bash
 cd ~
+
+# add local apt cache mirror
+echo 
+read -p "Set IP of your apt cache mirror (press ENTER to skip):" IP
+if [[ $IP -z ]]
+then
+  echo "Acquire::http::Proxy \"http://$(IP):3142\";" | sudo tee /etc/apt/apt.conf.d/00aptproxy > /dev/null
+fi
+
+
+# install packages
 sudo apt install qemu-guest-agent
 sudo systemctl start qemu-guest-agent
 
