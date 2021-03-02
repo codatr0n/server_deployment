@@ -15,3 +15,6 @@ documentation and script for my server deployments
 
 #### Ubuntu
 `wget -O - https://raw.githubusercontent.com/codatr0n/server_deployment/main/ubuntu_docker.sh | sh`
+
+#### Add APT Cacher NG proxy
+`wget -O - https://raw.githubusercontent.com/codatr0n/server_deployment/main/add_apt_proxy.sh | sh`
